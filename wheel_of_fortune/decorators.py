@@ -12,7 +12,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s: %(name)s - %(message)s',
     handlers=[
-        logging.FileHandler('game.log', encoding='utf-8'),
+        #logging.FileHandler('game.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
@@ -32,7 +32,7 @@ def timer(func):
         minutes, seconds = divmod(int(duration), 60)
         time_str = f"{minutes} мин {seconds} сек"
 
-        logger.info(f"Функция {func.__name__} выполнена за {time_str}")
+        #logger.info(f"Функция {func.__name__} выполнена за {time_str}")
         return result
 
     return wrapper
